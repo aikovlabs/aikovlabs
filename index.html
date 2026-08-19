@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aikov Labs — AI for Digital Pathology</title>
+  <meta name="description" content="A lab of AI models for digital pathology. Coming soon." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aikov Labs" />
+  <meta property="og:description" content="A lab of AI models for digital pathology. Coming soon." />
+  <meta property="og:url" content="https://aikovlabs.com" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Aikov Labs" />
+  <meta name="twitter:description" content="A lab of AI models for digital pathology. Coming soon." />
+
+  <meta name="theme-color" content="#f7fafb" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230ea5a4'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23f7fafb'/%3E%3C/svg%3E" />
+
+  <style>
+    :root {
+      --bg: #f7fafb;
+      --bg-accent: #eef5f6;
+      --ink: #1e2a32;
+      --muted: #5c6b74;
+      --accent: #0ea5a4;
+      --accent-deep: #0b7c7b;
+      --hairline: #d9e3e5;
+      --font-display: "Roboto", sans-serif;
+      --font-body: "Roboto", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 50% 0%, var(--bg-accent) 0%, var(--bg) 60%),
+        radial-gradient(circle at 1px 1px, rgba(14, 165, 164, 0.10) 1px, transparent 0);
+      background-size: 100% 100%, 26px 26px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .brand .mark {
+      width: 34px;
+      height: 34px;
+      flex: none;
+    }
+
+    .brand .name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .brand .name .a { color: var(--accent-deep); }
+    .brand .name .b { color: var(--ink); }
+
+    .eyebrow {
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-deep);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 7vw, 4rem);
+      line-height: 1.05;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .tagline {
+      font-size: clamp(1.05rem, 2.6vw, 1.4rem);
+      color: var(--muted);
+      max-width: 34ch;
+      line-height: 1.5;
+      margin: 0 auto 1rem;
+    }
+
+    .support {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 42ch;
+      line-height: 1.6;
+      margin: 0 auto;
+      opacity: 0.85;
+    }
+
+    .rule {
+      width: 48px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--accent);
+      margin: 2.25rem auto 0;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem 1.25rem;
+      padding: 1.75rem 1.5rem;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    footer .domain { font-weight: 600; color: var(--ink); }
+
+    footer a {
+      color: var(--accent-deep);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    footer a:hover { border-bottom-color: var(--accent-deep); }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      main { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="#0ea5a4" opacity="0.12" />
+        <circle cx="16" cy="16" r="10" fill="none" stroke="#0ea5a4" stroke-width="1.5" />
+        <circle cx="16" cy="16" r="4" fill="#0b7c7b" />
+      </svg>
+      <span class="name"><span class="a">Aikov</span> <span class="b">Labs</span></span>
+    </div>
+
+    <p class="eyebrow">AI &middot; Digital Pathology</p>
+    <h1>Coming soon</h1>
+    <p class="tagline">A lab of AI models for digital pathology.</p>
+    <p class="support">Advancing diagnostics through machine learning.</p>
+
+    <div class="rule" aria-hidden="true"></div>
+  </main>
+
+  <footer>
+    <span class="domain">aikovlabs.com</span>
+    <a href="mailto:info@aikovlabs.com">info@aikovlabs.com</a>
+  </footer>
+</body>
+</html>
